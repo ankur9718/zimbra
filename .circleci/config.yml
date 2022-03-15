@@ -9,9 +9,13 @@ jobs:
          - run:
             ls             
          - run:
-            git clone https://github.com/Zimbra/zm-build.git .
+            git clone https://github.com/Zimbra/zm-build.git
          - run:
-            ls
+            cp config.build ./zm-build
+         - run:
+            cd zm-build
+         - run:
+            ls 
          - run:
             cat config.build      
             
