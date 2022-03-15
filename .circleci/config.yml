@@ -2,27 +2,15 @@ version: 2.1
 executors:
   my-custom-executor:
     docker:
-      - image: ubuntu:18.04
+      - image: ankur9718/zmcase2:latest
 jobs:
   my-job-name:
 
     executor: my-custom-executor
     steps:
-      - checkout
       - run:
-         whoami             
-      - run: 
-         apt-get update -y
-      - run: 
-         apt-get install docker.io -y
-      - run: 
-         apt-get install sudo -y             
-      - run: 
-         apt install systemd -y 
-      - run: 
-         systemctl start docker
-      - run: 
-         docker build -t zmbuildimg .
+         docker run -it --name zmcontain ankur9718/zmcase2 /bin/bash             
+      
 
 workflows:
   my-custom-workflow:
