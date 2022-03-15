@@ -9,7 +9,7 @@ jobs:
     executor: my-custom-executor
     steps:
       - run:
-         docker run -it --name zmcontain ankur9718/zmcase2 /bin/bash             
+         docker images             
    
 
 workflows:
