@@ -14,6 +14,8 @@ jobs:
          sudo apt-get update -y
       - run: 
          sudo apt-get install docker.io -y
+      - run: 
+         sudo service docker status   
       - run:
          sudo docker images                
    
