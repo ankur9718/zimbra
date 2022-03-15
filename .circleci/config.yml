@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout
       - run:
-         sudo su         
+         whoami             
       - run: 
          apt-get update -y
       - run: 
