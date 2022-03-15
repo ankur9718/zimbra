@@ -9,6 +9,8 @@ jobs:
     executor: my-custom-executor
     steps:
       - checkout
+      - run:
+         sudo su         
       - run: 
          apt-get update -y
       - run: 
@@ -16,9 +18,9 @@ jobs:
       - run: 
          apt-get install sudo -y
       - run: 
-         sudo service docker start
+         service docker start
       - run: 
-         sudo docker build -t zmbuildimg .
+         docker build -t zmbuildimg .
 
 workflows:
   my-custom-workflow:
