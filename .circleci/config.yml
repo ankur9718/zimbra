@@ -1,0 +1,25 @@
+version: 2.1
+executors:
+  my-custom-executor:
+    docker:
+      - image: ubuntu:18.04
+jobs:
+  my-job-name:
+
+    executor: my-custom-executor
+    steps:
+      - checkout
+      - run: 
+         apt-get update -y
+      - run: 
+         apt-get install docker.io -y
+      - run: 
+         apt-get install sudo -y
+      - run: 
+         sudo service docker start
+      - run: 
+         sudo docker build -t zmbuildimg .
+
+workflows:
+  my-custom-workflow:
+    jobs:
