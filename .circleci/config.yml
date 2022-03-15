@@ -9,7 +9,13 @@ jobs:
     executor: my-custom-executor
     steps:
       - run:
-         docker images             
+         whoami             
+      - run: 
+         apt-get update -y
+      - run: 
+         apt-get install docker.io -y
+      - run:
+         docker images                
    
 
 workflows:
