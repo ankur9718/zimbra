@@ -18,7 +18,7 @@ jobs:
       - run: 
          apt-get install sudo -y
       - run: 
-         apt install systemd   
+         apt install systemd -y 
       - run: 
          systemctl start docker
       - run: 
