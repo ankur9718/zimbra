@@ -11,11 +11,11 @@ jobs:
       - run:
          whoami             
       - run: 
-         apt-get update -y
+         sudo apt-get update -y
       - run: 
-         apt-get install docker.io -y
+         sudo apt-get install docker.io -y
       - run:
-         docker images                
+         sudo docker images                
    
 
 workflows:
