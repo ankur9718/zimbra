@@ -18,8 +18,6 @@ jobs:
       - run: 
          apt-get install sudo -y
       - run: 
-         service docker start
-      - run: 
          docker build -t zmbuildimg .
 
 workflows:
