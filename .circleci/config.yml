@@ -9,7 +9,7 @@ jobs:
          - run:
             ls             
          - run:
-            git clone https://github.com/Zimbra/zm-build.git 
+            git clone https://github.com/Zimbra/zm-build.git .
          - run:
             ls
          - run:
