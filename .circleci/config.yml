@@ -4,12 +4,18 @@ jobs:
       docker:
          - image: ankur9718/zmcase2:latest
       steps:
+         - checkout
+        
          - run:
-            whoami             
+            ls             
          - run:
             git clone https://github.com/Zimbra/zm-build.git 
+         - run:
+            ls
+         - run:
+            cat config.build      
             
                          
    
 
-  
+   
