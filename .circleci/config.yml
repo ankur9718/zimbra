@@ -13,7 +13,7 @@ jobs:
          - run:
             cp config.build ./zm-build
          - run:
-            cd zm-build
+            cd zm-build ; ls
          - run:
             ls 
          - run:
