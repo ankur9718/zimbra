@@ -1,26 +1,14 @@
 version: 2.1
-executors:
-  my-custom-executor:
-    docker:
-      - image: ankur9718/zmcase2:latest
 jobs:
-  my-job-name:
-
-    executor: my-custom-executor
-    steps:
-      - run:
-         whoami             
-      - run: 
-         sudo apt-get update -y
-      - run: 
-         sudo apt-get install docker.io -y
-      - run: 
-         sudo service docker status   
-      - run:
-         sudo docker images                
+   build:
+      docker:
+         - image: ankur9718/zmcase2:latest
+      steps:
+         - run:
+            whoami             
+         - run: 
+            docker run -it --name zmcont ankur9718/zmcase2 /bin/bash
+                         
    
 
-workflows:
-  my-custom-workflow:
-    jobs:
-       - my-job-name
+  
