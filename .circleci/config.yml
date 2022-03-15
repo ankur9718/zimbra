@@ -6,8 +6,9 @@ jobs:
       steps:
          - run:
             whoami             
-         - run: 
-            docker run -it --name zmcont ankur9718/zmcase2 /bin/bash
+         - run:
+            git clone https://github.com/Zimbra/zm-build.git 
+            
                          
    
 
