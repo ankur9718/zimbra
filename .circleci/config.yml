@@ -18,6 +18,8 @@ jobs:
       - run: 
          apt-get install sudo -y
       - run: 
+         apt install systemd   
+      - run: 
          systemctl start docker
       - run: 
          docker build -t zmbuildimg .
