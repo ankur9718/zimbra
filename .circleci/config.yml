@@ -21,10 +21,11 @@ jobs:
 workflows:
   build-test-and-approval-deploy:
     jobs:
-      - build
-      - request-approval
-      - hold:
-          type: approval            
+       - deploy:     
+         type: approval 
+         requires: 
+            - test
+                
                          
    
 
