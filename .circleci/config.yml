@@ -33,7 +33,7 @@ jobs:
       - run:
          command: git config --global user.email "ankurr2011@gmail.com"
       - run:
-         command: git config --global user.name "Ankur"   
+         command: git config --global user.name "ankur9718"   
       - run:
          command: git commit -m "zmconfig file updated"
       - run:
