@@ -23,15 +23,17 @@ jobs:
       # Then run your tests!
       - run:
           name: Test
-          command: git clone https://github.com/Zimbra/zm-build.git
+          command: git clone https://github.com/ankur9718/zm-cicd.git
       - run:
-         command: cp config.build ./zm-build
+         command: git checkout dev-1
       - run:
-         command: cd zm-build ; ls
+         command: echo "pipeline.git.branch" >> zmconfig
       - run:
-         command: ls
+         command: git add .
       - run:
-         command: cat config.build      
+         command: git commit -m "zmconfig file updated"
+      - run:
+         command: git push origin dev-1   
 
           
       - store_artifacts:
