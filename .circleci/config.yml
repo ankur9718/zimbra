@@ -11,7 +11,7 @@ jobs:
          - run:
             git show --name-only e4a717390cae895c9a3a34bf934ab86b9b5066d8 | grep config.build
          - run:
-            command:
+            command: |
                if [ $? -eq 0 ]
                then
                  echo "config files changed"
