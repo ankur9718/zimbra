@@ -10,7 +10,7 @@ jobs:
             ls             
          - run:
             git show --name-only ${CIRCLE_SHA1} | grep config.build
-            if [ $? -eq 0 ]; then 
+            if [ $? -eq 0 ]; 
+            then 
               echo "Ankur Sharma" 
-              // Do your job steps
             fi
