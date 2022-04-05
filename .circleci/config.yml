@@ -10,7 +10,7 @@ jobs:
             ls             
          - run:
             command:
-               git show --name-only ${CIRCLE_SHA1} | grep config.build;
+               git show --name-only ${CIRCLE_SHA1} | grep config.build
                if [ $? -eq 0 ]
                then
                  echo "config files changed"
